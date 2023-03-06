@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
 	// Loading page
 	var loaderPage = function() {
 		$(".site-loader").fadeOut("slow");
+		 
 	};
 	loaderPage();
 	
