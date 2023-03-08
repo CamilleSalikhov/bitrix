@@ -8,8 +8,8 @@ IncludeTemplateLangFile(__FILE__);
 <head>
 <?$APPLICATION->ShowPanel();?>
 <?$APPLICATION->ShowHead();?>
-<?$APPLICATION->ShowMeta("keywords")?>
-<?$APPLICATION->ShowMeta("description")?>
+<?$APPLICATION->ShowMeta("keywords");?>
+<?$APPLICATION->ShowMeta("description");?>
 <?$APPLICATION->ShowCSS();?>
  
   <title>HomeSpace &mdash; Colorlib Website Template</title>
@@ -200,7 +200,14 @@ IncludeTemplateLangFile(__FILE__);
     </div>
   </div>
 <!-- компонент  ленты новостей, просто разместить пока -->
-<?$APPLICATION->IncludeComponent("bitrix:news.list", "carousel", Array(
+<?
+GLOBAL $arrFilterCarousel;
+$selectID = 8;
+$arrFilterCarousel = array("PROPERTY_PRIORITY"=>$selectID);
+
+ 
+
+$APPLICATION->IncludeComponent("bitrix:news.list", "carouselnew", Array(
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
 		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
 		"AJAX_MODE" => "N",	// Включить режим AJAX
@@ -224,7 +231,7 @@ IncludeTemplateLangFile(__FILE__);
 			0 => "",
 			1 => "",
 		),
-		"FILTER_NAME" => "",	// Фильтр
+		"FILTER_NAME" => "arrFilterCarousel",	// Фильтр
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
 		"IBLOCK_ID" => $_REQUEST["ID"],	// Код информационного блока
 		"IBLOCK_TYPE" => "ads",	// Тип информационного блока (используется только для проверки)
@@ -262,7 +269,7 @@ IncludeTemplateLangFile(__FILE__);
 	),
 	false
 );?>
-  <div class="slide-one-item home-slider owl-carousel">
+  <!-- <div class="slide-one-item home-slider owl-carousel">
 
 
 
@@ -297,7 +304,7 @@ IncludeTemplateLangFile(__FILE__);
 
     </div>
 
-  </div>
+  </div> -->
 
   <div class="py-5">
     <div class="container">
