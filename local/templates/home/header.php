@@ -376,26 +376,46 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "carouselnew", Array(
   <div class="site-section site-section-sm bg-light">
 
   <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить, рядом с текущей вёрсткой -->
+   
   <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"",
-	Array(
+	"bitrix:news.line", 
+	"mynewproperties", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array("", ""),
-		"IBLOCKS" => array(),
+		"FIELD_CODE" => array(
+			0 => "PREVIEW_TEXT",
+			1 => "PREVIEW_PICTURE",
+			2 => "DETAIL_TEXT",
+			3 => "DETAIL_PICTURE",
+			4 => "DATE_ACTIVE_FROM",
+			5 => "PROPERTY_PREVIEW_TEXT",
+			6 => "PROPERTY_SPACE",
+			7 => "PROPERTY_PRICE",
+			8 => "PROPERTY_GARAGE",
+			9 => "PROPERTY_BATHROOMS",
+			10 => "PROPERTY_FLOORS",
+			11 => "",
+		),
+		"IBLOCKS" => array(
+		),
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
-    <div class="container">
+
+
+
+    <!-- <div class="container">
       <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
@@ -612,7 +632,7 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "carouselnew", Array(
 
       </div>
 
-    </div>
+    </div> -->
   </div>
 
   <div class="site-section">
