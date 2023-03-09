@@ -122,7 +122,7 @@ $this->setFrameMode(true);
         <p class="mb-2"><strong> <?=isset($arItem["ACTIVE_FROM"]) ? $arItem["ACTIVE_FROM"] : "";?></strong></p>
 
 
-        <!-- <p class="mb-0"><a href="#" class="text-uppercase small letter-spacing-1 font-weight-bold">More Details</a></p> -->
+        <p class="mb-0"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="text-uppercase small letter-spacing-1 font-weight-bold">Узнать больше</a></p> 
 
       </div>
     </div>
