@@ -224,33 +224,48 @@ $APPLICATION->IncludeComponent(
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(
 			0 => "ID",
 			1 => "CODE",
-			2 => "NAME",
-			3 => "PREVIEW_TEXT",
-			4 => "PREVIEW_PICTURE",
-			5 => "DETAIL_TEXT",
-			6 => "DETAIL_PICTURE",
-			7 => "DATE_ACTIVE_FROM",
-			8 => "ACTIVE_FROM",
-			9 => "DATE_ACTIVE_TO",
-			10 => "ACTIVE_TO",
-			11 => "DATE_CREATE",
-			12 => "",
+			2 => "XML_ID",
+			3 => "NAME",
+			4 => "TAGS",
+			5 => "SORT",
+			6 => "PREVIEW_TEXT",
+			7 => "PREVIEW_PICTURE",
+			8 => "DETAIL_TEXT",
+			9 => "DETAIL_PICTURE",
+			10 => "DATE_ACTIVE_FROM",
+			11 => "ACTIVE_FROM",
+			12 => "DATE_ACTIVE_TO",
+			13 => "ACTIVE_TO",
+			14 => "SHOW_COUNTER",
+			15 => "SHOW_COUNTER_START",
+			16 => "IBLOCK_TYPE_ID",
+			17 => "IBLOCK_ID",
+			18 => "IBLOCK_CODE",
+			19 => "IBLOCK_NAME",
+			20 => "IBLOCK_EXTERNAL_ID",
+			21 => "DATE_CREATE",
+			22 => "CREATED_BY",
+			23 => "CREATED_USER_NAME",
+			24 => "TIMESTAMP_X",
+			25 => "MODIFIED_BY",
+			26 => "USER_NAME",
+			27 => "",
 		),
 		"FILTER_NAME" => "arrFilterCarousel",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => $_REQUEST["ID"],
 		"IBLOCK_TYPE" => "ads",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"INCLUDE_SUBSECTIONS" => "Y",
+		"INCLUDE_SUBSECTIONS" => "N",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
@@ -265,8 +280,10 @@ $APPLICATION->IncludeComponent(
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
 			0 => "",
-			1 => "",
-			2 => "",
+			1 => "PROPERTY_HYPERTEXT",
+			2 => "PROPERTY_PRICE",
+			3 => "PROPERTY_PRIORITY",
+			4 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -275,10 +292,10 @@ $APPLICATION->IncludeComponent(
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
+		"SORT_BY1" => "SORT",
+		"SORT_BY2" => "",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "",
 		"STRICT_SECTION_CHECK" => "N",
 		"COMPONENT_TEMPLATE" => "carouselnew"
 	),
@@ -391,7 +408,14 @@ $APPLICATION->IncludeComponent(
   <div class="site-section site-section-sm bg-light">
 
   <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить, рядом с текущей вёрсткой -->
-   
+  <div class="container">
+  <div class="row mb-5">
+        <div class="col-12">
+          <div class="site-section-title">
+            <h2>New Properties for You</h2>
+          </div>
+        </div>
+      </div>
   <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"mynewproperties", 
@@ -428,7 +452,7 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-
+</div>
 
     <!-- <div class="container">
       <div class="row mb-5">

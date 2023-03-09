@@ -23,14 +23,8 @@ $this->setFrameMode(true);
 </div> -->
  
 
-<div class="container">
-      <div class="row mb-5">
-        <div class="col-12">
-          <div class="site-section-title">
-            <h2>New Properties for You</h2>
-          </div>
-        </div>
-      </div>
+ 
+       
       <div class="row mb-5">
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 
