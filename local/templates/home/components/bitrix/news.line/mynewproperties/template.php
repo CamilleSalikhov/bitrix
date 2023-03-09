@@ -52,26 +52,26 @@ $this->setFrameMode(true);
               <div class="prop-more-info">
                 <div class="inner d-flex">
                   <div class="col">
-                    <span>Площадь:</span>
+                    <span><?=GetMessage("SPACE")?>:</span>
                     <strong><?=isset($arItem["PROPERTY_SPACE_VALUE"]) ? $arItem["PROPERTY_SPACE_VALUE"] : "";?><sup>2</sup></strong>
                   </div>
                   <div class="col">
-                    <span>Этажи:</span>
+                    <span><?=GetMessage("FLOOR")?>:</span>
                     <strong><?=isset($arItem["PROPERTY_FLOORS_VALUE"]) ? $arItem["PROPERTY_FLOORS_VALUE"] : "";?></strong>
                   </div>
                   <div class="col">
-                    <span>Санузлов:</span>
+                    <span><?=GetMessage("BATHROOM")?>:</span>
                     <strong><?=isset($arItem["PROPERTY_BATHROOMS_VALUE"]) ? $arItem["PROPERTY_BATHROOMS_VALUE"] : "";?></strong>
                   </div>
                   <div class="col">
-                    <span>Гараж:</span>
+                    <span><?=GetMessage("GARAGE")?>:</span>
                     <strong><?=isset($arItem["PROPERTY_GARAGE_VALUE"]) ? $arItem["PROPERTY_GARAGE_VALUE"] : "";?></strong>
                   </div>
                 </div>
               </div>
             </div>
           </a>
-        </div>
+        </div> 
 		
 	<?endforeach;?>
 

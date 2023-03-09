@@ -53,10 +53,10 @@ $this->setFrameMode(true);
 			 
 		  <span class="<?=$iconType;?>"></span>
             <h2 class="service-heading"><?=isset($arItem["NAME"]) ? $arItem["NAME"] : "";?></h2>
-            <p><span class="read-more">УЗНАТЬ БОЛЬШЕ</span></p>
+            <p><span class="read-more"><?=GetMessage("MORE_INFO");?></span></p>
           </a>
         </div>
-
+ 
 
 
 <?endforeach;?>
