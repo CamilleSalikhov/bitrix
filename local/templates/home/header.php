@@ -3,6 +3,40 @@
 IncludeTemplateLangFile(__FILE__);
 ?>
 
+
+
+
+<?
+    
+ $sResult = "";
+ if (CModule::IncludeModule('iblock')) {
+     $iBlock = 5;
+     $arSelect = Array("ID", "IBLOCK_ID", "NAME","PROPERTY_PRICE", "PROPERTY_PRIORITY");
+     $arFilter = array("IBLOCK_ID" => $iBlock,"PROPERTY_GARAGE_VALUE"=>"YES",   "ACTIVE" => "Y");
+     $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+     while ($ob = $res->GetNextElement()) {
+          $arFields = $ob->GetFields();
+          var_dump($arFields);}
+ }
+
+ ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
