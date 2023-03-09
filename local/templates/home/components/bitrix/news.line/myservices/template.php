@@ -22,7 +22,14 @@ $this->setFrameMode(true);
 	<?endforeach;?>
 </div> -->
 
-
+<div class="container">
+<div class="row justify-content-center">
+        <div class="col-md-7 text-center mb-5">
+          <div class="site-section-title">
+            <h2>Our Services</h2>
+          </div>
+        </div>
+      </div>
 <div class="row">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
@@ -56,10 +63,11 @@ $this->setFrameMode(true);
             <p><span class="read-more"><?=GetMessage("MORE_INFO");?></span></p>
           </a>
         </div>
- 
+  
 
 
 <?endforeach;?>
          
          
       </div>
+	  </div>

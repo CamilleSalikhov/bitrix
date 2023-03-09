@@ -487,14 +487,14 @@ $APPLICATION->IncludeComponent(
     
    
 
-    <div class="container">
-      <div class="row justify-content-center">
+    <!-- <div class="container"> -->
+      <!-- <div class="row justify-content-center">
         <div class="col-md-7 text-center mb-5">
           <div class="site-section-title">
             <h2>Our Services</h2>
           </div>
         </div>
-      </div>
+      </div> -->
  
 
 <?$APPLICATION->IncludeComponent("bitrix:news.line", "myservices", Array(
@@ -564,7 +564,7 @@ $APPLICATION->IncludeComponent(
           </a>
         </div>
       </div> -->
-    </div>
+    <!-- </div> -->
   </div>
 
   <div class="site-section bg-light">
