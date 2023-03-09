@@ -639,25 +639,7 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "carouselnew", Array(
 
   <!-- Компонент ленты новостей (bitrix:news.line) - просто разместить,
    рядом с текущей вёрсткой, внедрять ненужно, создать ИБ "Сервисы" -->
-   <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"",
-	Array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"DETAIL_URL" => "",
-		"FIELD_CODE" => array("",""),
-		"IBLOCKS" => array(),
-		"IBLOCK_TYPE" => "service",
-		"NEWS_COUNT" => "20",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
-);?><br>
+    
    
 
     <div class="container">
@@ -668,8 +650,31 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "carouselnew", Array(
           </div>
         </div>
       </div>
+ 
 
-      <div class="row">
+<?$APPLICATION->IncludeComponent("bitrix:news.line", "myservices", Array(
+	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
+		"FIELD_CODE" => array(	// Поля
+			0 => "NAME",
+			1 => "PROPERTY_HYPER",
+			2 => "PROPERTY_WORK_TYPE",
+		),
+		"IBLOCKS" => "",	// Код информационного блока
+		"IBLOCK_TYPE" => "service",	// Тип информационного блока
+		"NEWS_COUNT" => "20",	// Количество новостей на странице
+		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?> 
+      <!-- <div class="row">
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="#" class="service text-center border rounded">
             <span class="icon flaticon-house"></span>
@@ -713,7 +718,7 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "carouselnew", Array(
             <p><span class="read-more">Learn More</span></p>
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
