@@ -68,7 +68,7 @@ $APPLICATION->IncludeComponent(
 		),
 		"FILTER_NAME" => "arrFilterCarousel",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "",
+		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "ads",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "N",
