@@ -26,7 +26,7 @@ $this->setFrameMode(true);
 <div class="row justify-content-center">
         <div class="col-md-7 text-center mb-5">
           <div class="site-section-title">
-            <h2>Our Services</h2>
+            <h2><?=GetMessage("MY_SERVICES");?></h2>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ $this->setFrameMode(true);
         </div>
   
 
-
+ 
 <?endforeach;?>
          
          

@@ -21,9 +21,16 @@ $this->setFrameMode(true);
 		<small id="<?=$this->GetEditAreaId($arItem['ID']);?>"><span class="news-date-time"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?>&nbsp;&nbsp;</span><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a><br /></small>
 	<?endforeach;?>
 </div> -->
+ 
 
-
-
+<div class="container">
+<div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center">
+          <div class="site-section-title">
+            <h2><?=GetMessage("OUR_BLOG");?></h2>
+          </div>
+        </div>
+      </div>
 <div class="row">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
@@ -51,3 +58,4 @@ $this->setFrameMode(true);
          
 
       </div>
+	  </div>

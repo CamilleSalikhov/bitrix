@@ -28,8 +28,8 @@ $this->setFrameMode(true);
 <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
-            <h2>New Properties for You</h2>
-          </div>
+            <h2><?=GetMessage("NEW_PROPERTIES");?></h2>
+          </div> 
         </div>
       </div>
       <div class="row mb-5">

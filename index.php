@@ -1,12 +1,6 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
-<?$APPLICATION->SetTitle("Мебельная компания");?>
-
-
-<body>
-   
-<!-- компонент  ленты новостей, просто разместить пока -->
-<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("");?><?$APPLICATION->SetTitle("Мебельная компания");?> <!-- компонент  ленты новостей, просто разместить пока --> <?
 GLOBAL $arrFilterCarousel;
 $selectID = 8;
 $arrFilterCarousel = array("PROPERTY_PRIORITY"=>$selectID);
@@ -106,8 +100,7 @@ $APPLICATION->IncludeComponent(
 		"COMPONENT_TEMPLATE" => "carouselnew"
 	),
 	false
-);?>
-  <!-- <div class="slide-one-item home-slider owl-carousel">
+);?> <!-- <div class="slide-one-item home-slider owl-carousel">
 
 
 
@@ -143,20 +136,17 @@ $APPLICATION->IncludeComponent(
     </div>
 
   </div> -->
-
-  <div class="py-5">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="feature d-flex align-items-start">
-            <span class="icon mr-3 flaticon-house"></span>
-            <!-- <div class="text">
+<div class="py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+				<div class="feature d-flex align-items-start">
+ <span class="icon mr-3 flaticon-house"></span>
+					<!-- <div class="text">
               <h2 class="mt-0">Wide Range of Properties</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
               </p>
-            </div> -->
-  <?$APPLICATION->IncludeComponent(
+            </div> --> <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -166,17 +156,16 @@ $APPLICATION->IncludeComponent(
 		"PATH" => "/include/myinfofirst.php"
 	)
 );?>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="feature d-flex align-items-start">
-            <span class="icon mr-3 flaticon-rent"></span>
-            <!-- <div class="text">
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+				<div class="feature d-flex align-items-start">
+ <span class="icon mr-3 flaticon-rent"></span>
+					<!-- <div class="text">
               <h2 class="mt-0">Rent or Sale</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
               </p>
-            </div> -->
-            <?$APPLICATION->IncludeComponent(
+            </div> --> <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -186,17 +175,16 @@ $APPLICATION->IncludeComponent(
 		"PATH" => "/include/myinfosecond.php"
 	)
 );?>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="feature d-flex align-items-start">
-            <span class="icon mr-3 flaticon-location"></span>
-            <!-- <div class="text">
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+				<div class="feature d-flex align-items-start">
+ <span class="icon mr-3 flaticon-location"></span>
+					<!-- <div class="text">
               <h2 class="mt-0">Property Location</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
               </p>
-            </div> -->
-            <?$APPLICATION->IncludeComponent(
+            </div> --> <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -206,61 +194,38 @@ $APPLICATION->IncludeComponent(
 		"PATH" => "/include/myinfothird.php"
 	)
 );?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="site-section site-section-sm bg-light">
-
-  <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить, рядом с текущей вёрсткой -->
-  <!-- <div class="container"> -->
-  <!-- <div class="row mb-5">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="site-section site-section-sm bg-light">
+	 <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить, рядом с текущей вёрсткой --> <!-- <div class="container"> --> <!-- <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
             <h2>New Properties for You</h2>
           </div>
         </div>
-      </div> -->
-  <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line", 
-	"mynewproperties", 
-	array(
+      </div> --> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"mynewproperties",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "PREVIEW_TEXT",
-			1 => "PREVIEW_PICTURE",
-			2 => "DETAIL_TEXT",
-			3 => "DETAIL_PICTURE",
-			4 => "DATE_ACTIVE_FROM",
-			5 => "PROPERTY_PREVIEW_TEXT",
-			6 => "PROPERTY_SPACE",
-			7 => "PROPERTY_PRICE",
-			8 => "PROPERTY_GARAGE",
-			9 => "PROPERTY_BATHROOMS",
-			10 => "PROPERTY_FLOORS",
-			11 => "",
-		),
-		"IBLOCKS" => array(
-		),
+		"FIELD_CODE" => array(0=>"PREVIEW_TEXT",1=>"PREVIEW_PICTURE",2=>"DETAIL_TEXT",3=>"DETAIL_PICTURE",4=>"DATE_ACTIVE_FROM",5=>"PROPERTY_PREVIEW_TEXT",6=>"PROPERTY_SPACE",7=>"PROPERTY_PRICE",8=>"PROPERTY_GARAGE",9=>"PROPERTY_BATHROOMS",10=>"PROPERTY_FLOORS",11=>"",),
+		"IBLOCKS" => array(),
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
-
-<!-- </div> -->
-
-    <!-- <div class="container">
+		"SORT_ORDER2" => "ASC"
+	)
+);?> <!-- </div> --> <!-- <div class="container">
       <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
@@ -478,48 +443,35 @@ $APPLICATION->IncludeComponent(
       </div>
 
     </div> -->
-  </div>
-
-  <div class="site-section">
-
-  <!-- Компонент ленты новостей (bitrix:news.line) - просто разместить,
-   рядом с текущей вёрсткой, внедрять ненужно, создать ИБ "Сервисы" -->
-    
-   
-
-    <!-- <div class="container"> -->
-      <!-- <div class="row justify-content-center">
+</div>
+<div class="site-section">
+	 <!-- Компонент ленты новостей (bitrix:news.line) - просто разместить,
+   рядом с текущей вёрсткой, внедрять ненужно, создать ИБ "Сервисы" --> <!-- <div class="container"> --> <!-- <div class="row justify-content-center">
         <div class="col-md-7 text-center mb-5">
           <div class="site-section-title">
             <h2>Our Services</h2>
           </div>
         </div>
-      </div> -->
- 
-
-<?$APPLICATION->IncludeComponent("bitrix:news.line", "myservices", Array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
-		"FIELD_CODE" => array(	// Поля
-			0 => "NAME",
-			1 => "PROPERTY_HYPER",
-			2 => "PROPERTY_WORK_TYPE",
-		),
-		"IBLOCKS" => "",	// Код информационного блока
-		"IBLOCK_TYPE" => "service",	// Тип информационного блока
-		"NEWS_COUNT" => "20",	// Количество новостей на странице
-		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?> 
-      <!-- <div class="row">
+      </div> --> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"myservices",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(0=>"NAME",1=>"PROPERTY_HYPER",2=>"PROPERTY_WORK_TYPE",),
+		"IBLOCKS" => "",
+		"IBLOCK_TYPE" => "service",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
+	)
+);?> <!-- <div class="row">
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="#" class="service text-center border rounded">
             <span class="icon flaticon-house"></span>
@@ -563,56 +515,36 @@ $APPLICATION->IncludeComponent(
             <p><span class="read-more">Learn More</span></p>
           </a>
         </div>
-      </div> -->
-    <!-- </div> -->
-  </div>
-
-  <div class="site-section bg-light">
-
-
-
-  <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить,
-   рядом с текущей вёрсткой, внедрять ненужно, настроить на ИБ "Новости" -->
-   
-    <div class="container">
-      <div class="row justify-content-center mb-5">
+      </div> --> <!-- </div> -->
+</div>
+<div class="site-section bg-light">
+	 <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить,
+   рядом с текущей вёрсткой, внедрять ненужно, настроить на ИБ "Новости" --> <!-- <div class="container"> --> <!-- <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center">
           <div class="site-section-title">
             <h2>Our Blog</h2>
           </div>
         </div>
-      </div>
-
-
-      <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line", 
-	"myblog", 
-	array(
+      </div> --> <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line",
+	"myblog",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => "myblog",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "PREVIEW_TEXT",
-			1 => "PREVIEW_PICTURE",
-			2 => "DETAIL_TEXT",
-			3 => "DETAIL_PICTURE",
-			4 => "",
-		),
-		"IBLOCKS" => array(
-		),
+		"FIELD_CODE" => array(0=>"PREVIEW_TEXT",1=>"PREVIEW_PICTURE",2=>"DETAIL_TEXT",3=>"DETAIL_PICTURE",4=>"",),
+		"IBLOCKS" => array(),
 		"IBLOCK_TYPE" => "news",
 		"NEWS_COUNT" => "3",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => "myblog"
-	),
-	false
-);?>
-      <!-- <div class="row">
+		"SORT_ORDER2" => "ASC"
+	)
+);?> <!-- <div class="row">
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
           <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_4.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
@@ -641,18 +573,7 @@ $APPLICATION->IncludeComponent(
           </div>
         </div>
 
-      </div> -->
-
-    </div>
-  </div>
-
-  
-
-  
-
-  
-
-</body>
-
-
- <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+      </div> --> <!-- </div> -->
+</div>
+ <br>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
