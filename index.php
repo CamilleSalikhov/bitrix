@@ -214,14 +214,14 @@ $APPLICATION->IncludeComponent(
   <div class="site-section site-section-sm bg-light">
 
   <!-- Компонент ленты новостей (bitrix:news.line) - ранее размещался уже, просто разместить, рядом с текущей вёрсткой -->
-  <div class="container">
-  <div class="row mb-5">
+  <!-- <div class="container"> -->
+  <!-- <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
             <h2>New Properties for You</h2>
           </div>
         </div>
-      </div>
+      </div> -->
   <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"mynewproperties", 
@@ -258,7 +258,7 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-</div>
+<!-- </div> -->
 
     <!-- <div class="container">
       <div class="row mb-5">
