@@ -171,6 +171,7 @@ $APPLICATION->SetTitle("Объявления");
 		"USE_SHARE" => "N"
 	)
 );?>
+<?if($APPLICATION -> GetCurPage(true) == SITE_DIR."obyavleniya/index.php"):?>
 
 <div class="row">
           <div class="col-md-12 text-center">
@@ -183,6 +184,8 @@ $APPLICATION->SetTitle("Объявления");
 );?>
 </div>  
         </div>
+<?endif;?>
+
 
 <br>
  <br>
