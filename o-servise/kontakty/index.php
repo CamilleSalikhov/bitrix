@@ -1,12 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Контакты");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "page",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => ""
-	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><?$APPLICATION->IncludeComponent("bitrix:main.include", "mycontacts", Array(
+	"AREA_FILE_SHOW" => "page",	// Показывать включаемую область
+		"AREA_FILE_SUFFIX" => "inc",	// Суффикс имени файла включаемой области
+		"EDIT_TEMPLATE" => "",	// Шаблон области по умолчанию
+	),
+	false
+);?><br>
+ <br>
+ <br>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

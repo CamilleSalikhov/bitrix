@@ -53,37 +53,37 @@ IncludeTemplateLangFile(__FILE__);
    
   <?$APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500");?>
  
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/icomoon/style.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/bootstrap.min.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/magnific-popup.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/jquery-ui.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/owl.carousel.min.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/owl.theme.default.min.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/bootstrap-datepicker.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/mediaelementplayer.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/animate.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/flaticon/font/flaticon.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/fl-bigmug-line.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/aos.css");?>
-    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/style.css");?>  
+    <?$APPLICATION->SetAdditionalCSS( "/local/templates/.default/fonts/icomoon/style.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/bootstrap.min.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/magnific-popup.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/jquery-ui.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/owl.carousel.min.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/owl.theme.default.min.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/bootstrap-datepicker.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/mediaelementplayer.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/animate.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/fonts/flaticon/font/flaticon.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/fl-bigmug-line.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/aos.css");?>
+    <?$APPLICATION->SetAdditionalCSS("/local/templates/.default/css/style.css");?>  
 
            
-<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery-3.3.1.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery-migrate-3.0.1.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery-ui.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/popper.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/bootstrap.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/owl.carousel.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/mediaelement-and-player.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.stellar.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.countdown.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/jquery.magnific-popup.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/bootstrap-datepicker.min.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/aos.js');?>
-  <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH.'/js/main.js');?>
+<?$APPLICATION->AddHeadScript('/local/templates/.default/js/jquery-3.3.1.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/jquery-migrate-3.0.1.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/jquery-ui.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/popper.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/bootstrap.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/owl.carousel.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/mediaelement-and-player.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/jquery.stellar.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/jquery.countdown.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/jquery.magnific-popup.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/bootstrap-datepicker.min.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/aos.js');?>
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/main.js');?>
    
     
- 
+  
 
 
   

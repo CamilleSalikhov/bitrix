@@ -576,4 +576,4 @@ $APPLICATION->IncludeComponent(
       </div> --> <!-- </div> -->
 </div>
  <br>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
