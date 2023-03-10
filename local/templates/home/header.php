@@ -6,8 +6,8 @@ IncludeTemplateLangFile(__FILE__);
 
 
 
-<?
-    
+<!-- <?
+
  $sResult = "";
  if (CModule::IncludeModule('iblock')) {
      $iBlock = 5;
@@ -19,7 +19,7 @@ IncludeTemplateLangFile(__FILE__);
           var_dump($arFields);}
  }
 
- ?>
+ ?> -->
 
 
 
@@ -236,6 +236,51 @@ IncludeTemplateLangFile(__FILE__);
       </div>
     </div>
   </div>
+
+  <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."index.php"):?>  
+
+ 
+
+
+
+<?else:?>
+   
+
+
+  <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"newbreadcrumb",
+	Array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	)
+);?>
+  <!-- <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+            <h1 class="mb-2">About Us</h1>
+            <div><a href="index.html">Home</a> <span class="mx-2 text-white">&bullet;</span> <strong class="text-white">About</strong></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/include/mycontacts.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?> -->
+
+<?endif;?>
 
 </header>
 

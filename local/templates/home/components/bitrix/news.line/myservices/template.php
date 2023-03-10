@@ -38,7 +38,7 @@ $this->setFrameMode(true);
 		?>
 	<div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="col-md-6 col-lg-4 mb-4">
           <a href=<?=isset($arItem["PROPERTY_HYPER_VALUE"]) ? $arItem["PROPERTY_HYPER_VALUE"] : "";?> class="service text-center border rounded">
-            <?$iconType;
+            <!-- <?$iconType;
 			switch ($arItem["PROPERTY_WORK_TYPE_VALUE"]) {
 				case 'SECURITY':
 					$iconType = "icon flaticon-camera";
@@ -56,9 +56,9 @@ $this->setFrameMode(true);
 					break;
 			}
 			
-			?>
+			?> -->
 			 
-		  <span class="<?=$iconType;?>"></span>
+		  <span class="<?=$arItem["PROPERTY_WORK_TYPE_VALUE"];?>"></span>
             <h2 class="service-heading"><?=isset($arItem["NAME"]) ? $arItem["NAME"] : "";?></h2>
             <p><span class="read-more"><?=GetMessage("MORE_INFO");?></span></p>
           </a>

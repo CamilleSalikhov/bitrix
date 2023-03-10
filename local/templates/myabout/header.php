@@ -6,8 +6,8 @@ IncludeTemplateLangFile(__FILE__);
 
 
 
-<?
-    
+<!-- <? 
+
  $sResult = "";
  if (CModule::IncludeModule('iblock')) {
      $iBlock = 5;
@@ -19,7 +19,7 @@ IncludeTemplateLangFile(__FILE__);
           var_dump($arFields);}
  }
 
- ?>
+ ?> -->
 
 
 
