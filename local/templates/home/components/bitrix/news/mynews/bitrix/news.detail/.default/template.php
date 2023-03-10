@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 
     <!-- <? var_dump($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]   )?>    -->
-
+	  <!-- <?=var_dump($arResult["DISPLAY_PROPERTIES"] );?>   -->
 
 
 <div class="site-blocks-cover overlay" style="background-image: url(<?=$arResult["DETAIL_PICTURE"]["SRC"]?>);" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -57,28 +57,31 @@ $this->setFrameMode(true);
               
 			 -->
 			
+
+
+			  
 			</div>
             </div>
             <div class="bg-white">
               <div class="row mb-5">
                 <div class="col-md-6">
-                  <strong class="text-success h1 mb-3">$1,000,500</strong>
+                  <strong class="text-success h1 mb-3"><?=$arResult["DISPLAY_PROPERTIES"]["PRICE"]["VALUE"]?></strong>
                 </div>
                 <div class="col-md-6">
                   <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
                   <li>
-                    <span class="property-specs">Beds</span>
-                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    <span class="property-specs"><?=GetMessage("FLOORS")?></span>
+                    <span class="property-specs-number"><?=$arResult["DISPLAY_PROPERTIES"]["FLOORS"]["VALUE"]?><sup>+</sup></span>
                     
                   </li>
                   <li>
-                    <span class="property-specs">Baths</span>
-                    <span class="property-specs-number">2</span>
+                    <span class="property-specs"><?=GetMessage("CHANGE_DATE")?></span>
+                    <span class="property-specs-number"><?=$arResult["TIMESTAMP_X"]?></span>
                     
                   </li>
                   <li>
-                    <span class="property-specs">SQ FT</span>
-                    <span class="property-specs-number">7,000</span>
+                    <span class="property-specs"><?=GetMessage("SPACE")?></span>
+                    <span class="property-specs-number"><?=$arResult["DISPLAY_PROPERTIES"]["SPACE"]["VALUE"]?></span>
                     
                   </li>
                 </ul>
@@ -86,64 +89,49 @@ $this->setFrameMode(true);
               </div>
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Home Type</span>
-                  <strong class="d-block">Condo</strong>
+                  <span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("BATHROOMS")?></span>
+                  <strong class="d-block"><?=$arResult["DISPLAY_PROPERTIES"]["BATHROOMS"]["VALUE"]?></strong>
                 </div>
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Year Built</span>
-                  <strong class="d-block">2018</strong>
+                  <span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("GARAGE")?></span>
+                  <strong class="d-block"><?=$arResult["DISPLAY_PROPERTIES"]["GARAGE"]["VALUE"]?></strong>
                 </div>
-                <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
-                  <strong class="d-block">$520</strong>
-                </div>
+                 
               </div>
-              <h2 class="h4 text-black">More Info</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.</p>
-              <p>Nisi voluptatum error ipsum repudiandae, autem deleniti, velit dolorem enim quaerat rerum incidunt sed, qui ducimus! Tempora architecto non, eligendi vitae dolorem laudantium dolore blanditiis assumenda in eos hic unde.</p>
-              <p>Voluptatum debitis cupiditate vero tempora error fugit aspernatur sint veniam laboriosam eaque eum, et hic odio quibusdam molestias corporis dicta! Beatae id magni, laudantium nulla iure ea sunt aliquam.</p>
+              <h2 class="h4 text-black"><?=GetMessage("DETAIL_TEXT")?></h2>
+              <p><?=$arResult["DETAIL_TEXT"]?></p>
+               
 
               <div class="row mt-5">
                 <div class="col-12">
-                  <h2 class="h4 text-black mb-3">Property Gallery</h2>
+                  <h2 class="h4 text-black mb-3"><?=GetMessage("GALLERY")?></h2>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_1.jpg" class="image-popup gal-item"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+
+
+				<?if( isset($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"][0]) ):?>
+				<?foreach($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"] as $arItem):?>
+				 
+
+				<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                  <a href=<?=$arItem["SRC"]?> class="image-popup gal-item"><img src=<?=$arItem["SRC"]?> alt="Image" class="img-fluid"></a>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_2.jpg" class="image-popup gal-item"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+				
+				<?endforeach;?>
+			<?else:?>
+
+				<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                  <a href=<?=$arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]["SRC"]?> class="image-popup gal-item"><img src=<?=$arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]["SRC"]?> alt="Image" class="img-fluid"></a>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_3.jpg" class="image-popup gal-item"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_4.jpg" class="image-popup gal-item"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_5.jpg" class="image-popup gal-item"><img src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_6.jpg" class="image-popup gal-item"><img src="images/img_6.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_7.jpg" class="image-popup gal-item"><img src="images/img_7.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_8.jpg" class="image-popup gal-item"><img src="images/img_8.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_1.jpg" class="image-popup gal-item"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_2.jpg" class="image-popup gal-item"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_3.jpg" class="image-popup gal-item"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_4.jpg" class="image-popup gal-item"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-                </div>
+				
+				 <?endif;?> 
+
+
+                 
+                 
               </div>
+
+
+
             </div>
           </div>
           <div class="col-lg-4 pl-md-5">
@@ -180,3 +168,35 @@ $this->setFrameMode(true);
         </div>
       </div>
     </div>
+
+
+	<div>
+		<h2><?=GetMessage("ADDITIONAL")?></h2>
+	<?foreach($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_FILES"]["DISPLAY_VALUE"] as $arItem):?>
+  
+		<?=$arItem?>
+		 <br>
+	<?endforeach;?>
+		
+	</div>
+
+	<br>
+	<br>
+
+	<div>
+		<h2><?=GetMessage("RESOURCES")?></h2>
+
+
+
+	<?foreach($arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"] as $arItem):?>
+  
+		<?=$arItem?>
+		 <br>
+		 <br>
+	<?endforeach;?>
+		
+	</div>
+
+	 
+
+	
