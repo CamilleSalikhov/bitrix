@@ -13,6 +13,9 @@ if(empty($arResult))
 
 $strReturn = '';
 
+ 
+ 
+
 //we can't use $APPLICATION->SetAdditionalCSS() here because we are inside the buffered function GetNavChain()
 $css = $APPLICATION->GetCSSArray();
 if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
@@ -54,7 +57,7 @@ $strResult = '<div class="site-blocks-cover inner-page-cover overlay" style="bac
 <div class="container">
   <div class="row align-items-center justify-content-center text-center">
 	<div class="col-md-10">
-	  <h1 class="mb-2">About Us</h1>' . $strReturn . '</div>
+	  <h1 class="mb-2">' . $arResult[count($arResult)-1]["TITLE"] . '</h1>' . $strReturn . '</div>
 	  </div>
 	</div>
   </div>'; 

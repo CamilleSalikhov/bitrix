@@ -81,6 +81,8 @@ IncludeTemplateLangFile(__FILE__);
   <?$APPLICATION->AddHeadScript('/local/templates/.default/js/bootstrap-datepicker.min.js');?>
   <?$APPLICATION->AddHeadScript('/local/templates/.default/js/aos.js');?>
   <?$APPLICATION->AddHeadScript('/local/templates/.default/js/main.js');?>
+
+  <?$APPLICATION->AddHeadScript('/local/templates/.default/js/main.js');?>
    
     
   
@@ -96,7 +98,7 @@ IncludeTemplateLangFile(__FILE__);
   <title><?$APPLICATION->ShowTitle()?></title>
 </head>
 
-<header>
+ 
 <div class="site-loader"></div>  
 <div class="site-wrap">
 
@@ -284,7 +286,7 @@ IncludeTemplateLangFile(__FILE__);
 
 <?endif;?>
 
-</header>
+ 
 
  
  
