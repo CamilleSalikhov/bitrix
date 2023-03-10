@@ -21,8 +21,7 @@ $this->setFrameMode(true);
 
 
 
-<div class="site-section site-section-sm bg-light">
-<div class="container">
+
 <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
@@ -82,8 +81,7 @@ $this->setFrameMode(true);
         </div> 
 <?endforeach;?>
 </div>
-</div>
-</div>
+
 
 
 

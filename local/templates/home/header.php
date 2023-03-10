@@ -248,13 +248,15 @@ IncludeTemplateLangFile(__FILE__);
 
 
   <?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb",
-	"newbreadcrumb",
-	Array(
+	"bitrix:breadcrumb", 
+	"newbreadcrumb", 
+	array(
 		"PATH" => "",
 		"SITE_ID" => "s1",
-		"START_FROM" => "0"
-	)
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "newbreadcrumb"
+	),
+	false
 );?>
   <!-- <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
