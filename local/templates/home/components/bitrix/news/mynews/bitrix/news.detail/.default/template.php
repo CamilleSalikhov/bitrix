@@ -172,11 +172,18 @@ $this->setFrameMode(true);
 
 	<div>
 		<h2><?=GetMessage("ADDITIONAL")?></h2>
-	<?foreach($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_FILES"]["DISPLAY_VALUE"] as $arItem):?>
+		<?if( is_array($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_FILES"]["DISPLAY_VALUE"]) ):?>
+			 
+		<?foreach($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_FILES"]["DISPLAY_VALUE"] as $arItem):?>
   
-		<?=$arItem?>
-		 <br>
-	<?endforeach;?>
+  <?=$arItem?>
+   <br>
+   <br>
+<?endforeach;?>
+			<?else:?> 
+				<?=$arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_FILES"]["DISPLAY_VALUE"]?>
+				
+				 <?endif;?>
 		
 	</div>
 
@@ -188,15 +195,30 @@ $this->setFrameMode(true);
 
 
 
-	<?foreach($arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"] as $arItem):?>
+		<?if( is_array($arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"]) ):?>
+		<?foreach($arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"] as $arItem):?>
   
-		<?=$arItem?>
-		 <br>
-		 <br>
-	<?endforeach;?>
+  <?=$arItem?>
+   <br>
+   <br>
+<?endforeach;?>
+			<?else:?>
+				<?=$arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"]?>
+				
+				 <?endif;?>
 		
 	</div>
 
 	 
 
-	
+	<!-- <?if( is_array($arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"]) ):?>
+		<?foreach($arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"] as $arItem):?>
+  
+  <?=$arItem?>
+   <br>
+   <br>
+<?endforeach;?>
+			<?else:?>
+				<?=$arResult["DISPLAY_PROPERTIES"]["HYPERTEXT"]["DISPLAY_VALUE"]?>
+				
+				 <?endif;?>  -->
