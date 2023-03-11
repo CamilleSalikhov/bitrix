@@ -19,13 +19,20 @@ $this->setFrameMode(true);
 
 
 
-
+<!-- <?var_dump($arParams);?> -->
 
 
 <div class="row mb-5">
         <div class="col-12">
           <div class="site-section-title">
-            <h2><?=GetMessage("NEW_PROPERTIES");?></h2>
+            
+          <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."lichnyy-kabinet-prodavtsa/moi-obyavleniya/index.php"):?>
+            <h2><?=GetMessage("NEW_PROPERTIES_PERSONAL");?></h2>
+             
+            <?else:?>
+              <h2><?=GetMessage("NEW_PROPERTIES");?></h2>
+            <?endif;?>
+          
           </div> 
         </div>
       </div>
