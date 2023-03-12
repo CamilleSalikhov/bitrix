@@ -3,7 +3,7 @@
 CJSCore::Init();
 ?>
 
-<div class="bx-system-auth-form">
+<div class="bx-system-auth-form col-md-12 col-lg-8 mb-5">
 
 <?
 if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
@@ -21,11 +21,12 @@ if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
 <?endforeach?>
 	<input type="hidden" name="AUTH_FORM" value="Y" />
 	<input type="hidden" name="TYPE" value="AUTH" />
-	<table width="95%">
-		<tr>
-			<td colspan="2">
-			<?=GetMessage("AUTH_LOGIN")?>:<br />
-			<input type="text" name="USER_LOGIN" maxlength="50" value="" size="17" />
+	 
+
+		<div class="row form-group">
+                <div class="col-md-12">
+			  <label class="font-weight-bold" for="login"><?=GetMessage("AUTH_LOGIN")?></label>
+			<input id="login" class="form-control" type="text" name="USER_LOGIN" maxlength="50" value="" size="17" />
 			<script>
 				BX.ready(function() {
 					var loginCookie = BX.getCookie("<?=CUtil::JSEscape($arResult["~LOGIN_COOKIE_NAME"])?>");
@@ -37,12 +38,16 @@ if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
 					}
 				});
 			</script>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-			<?=GetMessage("AUTH_PASSWORD")?>:<br />
-			<input type="password" name="USER_PASSWORD" maxlength="255" size="17" autocomplete="off" />
+			</div>
+            
+		
+		</div>
+
+
+		<div class="row form-group">
+                <div class="col-md-12">
+		 <label class="font-weight-bold" for="pass"><?=GetMessage("AUTH_PASSWORD")?></label>
+			<input id="pass" class="form-control" type="password" name="USER_PASSWORD" maxlength="255" size="17" autocomplete="off" />
 <?if($arResult["SECURE_AUTH"]):?>
 				<span class="bx-auth-secure" id="bx_auth_secure<?=$arResult["RND"]?>" title="<?echo GetMessage("AUTH_SECURE_NOTE")?>" style="display:none">
 					<div class="bx-auth-secure-icon"></div>
@@ -56,13 +61,19 @@ if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
 document.getElementById('bx_auth_secure<?=$arResult["RND"]?>').style.display = 'inline-block';
 </script>
 <?endif?>
-			</td>
-		</tr>
+</div>
+    </div>
+
+
+
+
 <?if ($arResult["STORE_PASSWORD"] == "Y"):?>
-		<tr>
+	<div class="row form-group">
+	<div class="col-md-12">
 			<td valign="top"><input type="checkbox" id="USER_REMEMBER_frm" name="USER_REMEMBER" value="Y" /></td>
 			<td width="100%"><label for="USER_REMEMBER_frm" title="<?=GetMessage("AUTH_REMEMBER_ME")?>"><?echo GetMessage("AUTH_REMEMBER_SHORT")?></label></td>
-		</tr>
+			</div>
+			</div>
 <?endif?>
 <?if ($arResult["CAPTCHA_CODE"]):?>
 		<tr>
@@ -73,9 +84,15 @@ document.getElementById('bx_auth_secure<?=$arResult["RND"]?>').style.display = '
 			<input type="text" name="captcha_word" maxlength="50" value="" /></td>
 		</tr>
 <?endif?>
-		<tr>
-			<td colspan="2"><input type="submit" name="Login" value="<?=GetMessage("AUTH_LOGIN_BUTTON")?>" /></td>
-		</tr>
+
+
+<div class="row form-group">
+			<div class="col-md-12">
+			 <input class="btn btn-primary" type="submit" name="Login" value=<?=GetMessage("AUTH_LOGIN_BUTTON")?> /> 
+			 </div>	
+			 </div>		 
+			 
+
 <?if($arResult["NEW_USER_REGISTRATION"] == "Y"):?>
 		<tr>
 			<td colspan="2"><noindex><a href="<?=$arResult["AUTH_REGISTER_URL"]?>" rel="nofollow"><?=GetMessage("AUTH_REGISTER")?></a></noindex><br /></td>
@@ -86,7 +103,7 @@ document.getElementById('bx_auth_secure<?=$arResult["RND"]?>').style.display = '
 			<td colspan="2"><noindex><a href="<?=$arResult["AUTH_FORGOT_PASSWORD_URL"]?>" rel="nofollow"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a></noindex></td>
 		</tr>
  
-	</table>
+	 
 </form>
 
  
@@ -136,25 +153,51 @@ else:
 ?>
 <!-- Если уже зареган, не трогаем -->
 <form action="<?=$arResult["AUTH_URL"]?>">
-	<table width="95%">
-		<tr>
-			<td align="center">
+<div class="col-md-12 col-lg-8 mb-5">
+
+<?
+/* покупатель 6 , продавец 7  */;
+ 
+  $currID = $USER->GetID();
+ /* var_dump($USER); */
+  
+$gropList = CUser::GetUserGroup($currID);
+ 
+
+$currpage = "https://hv01-salihov.study.mcart.ru/avtorizatsiya/";
+
+
+foreach ($gropList as $item) {
+	if($item === "6") {
+		$currpage = "https://hv01-salihov.study.mcart.ru/lichnyy-kabinet-pokupatelya/";
+	}else if($item === "7") {
+		$currpage = "https://hv01-salihov.study.mcart.ru/lichnyy-kabinet-prodavtsa/";
+	}
+
+}  
+
+/* var_dump($currpage); */
+
+
+
+?>
+
+		 
 				<?=$arResult["USER_NAME"]?><br />
 				[<?=$arResult["USER_LOGIN"]?>]<br />
-				<a href="<?=$arResult["PROFILE_URL"]?>" title="<?=GetMessage("AUTH_PROFILE")?>"><?=GetMessage("AUTH_PROFILE")?></a><br />
-			</td>
-		</tr>
-		<tr>
-			<td align="center">
+				<a href="<?=$currpage?>" title="<?=GetMessage("AUTH_PROFILE")?>"><?=GetMessage("AUTH_PROFILE")?></a><br />
+			 
+		 
+			 
 			<?foreach ($arResult["GET"] as $key => $value):?>
 				<input type="hidden" name="<?=$key?>" value="<?=$value?>" />
 			<?endforeach?>
 			<?=bitrix_sessid_post()?>
 			<input type="hidden" name="logout" value="yes" />
 			<input class="btn btn-primary  py-2 px-4 rounded-0"  type="submit" name="logout_butt" value="<?=GetMessage("AUTH_LOGOUT_BUTTON")?>" />
-			</td>
-		</tr>
-	</table>
+			 
+		 
+		</div>
 </form>
 <?endif?>
 </div>
