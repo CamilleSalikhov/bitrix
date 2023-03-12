@@ -41,6 +41,20 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Авторизация", 
+		"/avtorizatsiya/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Регистрация", 
+		"/registratsiya/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
