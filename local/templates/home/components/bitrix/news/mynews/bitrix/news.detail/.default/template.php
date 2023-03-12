@@ -136,32 +136,41 @@ $this->setFrameMode(true);
           </div>
           <div class="col-lg-4 pl-md-5">
 
-            <div class="bg-white widget border rounded">
+             
 
-              <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
-              <form action="" class="form-contact-agent">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="submit" id="phone" class="btn btn-primary" value="Send Message">
-                </div>
-              </form>
-            </div>
+               
 
-            <div class="bg-white widget border rounded">
-              <h3 class="h4 text-black widget-title mb-3">Paragraph</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit qui explicabo, libero nam, saepe eligendi. Molestias maiores illum error rerum. Exercitationem ullam saepe, minus, reiciendis ducimus quis. Illo, quisquam, veritatis.</p>
-            </div>
+
+              <?$APPLICATION->IncludeComponent(
+	"bitrix:main.feedback",
+	"myfeedback",
+	Array(
+		"COMPONENT_TEMPLATE" => "myfeedback",
+		"EMAIL_TO" => "dontlookbackinanger@yandex.ru",
+		"EVENT_MESSAGE_ID" => array(0=>"7",),
+		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+		"REQUIRED_FIELDS" => array(0=>"NAME",1=>"EMAIL",),
+		"USE_CAPTCHA" => "Y"
+	)
+);?>
+
+
+              <!-- <form action="" class="form-contact-agent">
+                 
+              </form> -->
+             
+
+             
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+    "PATH" => "/include/mydetailContacts.php"
+	)
+);?>
 
           </div>
           
