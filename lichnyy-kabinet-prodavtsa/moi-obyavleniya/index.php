@@ -11,8 +11,8 @@ $APPLICATION->SetTitle("Мои объявления");
 /* $userID = $USER->GetID(); 
 $arFilter = array("CREATED_BY"=>$userID);
   */
-/* $GLOBALS["arrFilterNew"]["CREATED_BY"] = $USER->GetID();
- */
+$GLOBALS["arrFilterNew"]["CREATED_BY"] = $USER->GetID();
+
  
 ?>  
  
@@ -20,7 +20,7 @@ $arFilter = array("CREATED_BY"=>$userID);
 	"bitrix:news", 
 	"mynews", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -44,8 +44,16 @@ $arFilter = array("CREATED_BY"=>$userID);
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "HYPERTEXT",
+			1 => "PRICE",
+			2 => "PRIORITY",
+			3 => "FLOORS",
+			4 => "SPACE",
+			5 => "BATHROOMS",
+			6 => "GARAGE",
+			7 => "GALLERY",
+			8 => "ADDITIONAL_FILES",
+			9 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -61,24 +69,27 @@ $arFilter = array("CREATED_BY"=>$userID);
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "PRICE",
-			1 => "PRIORITY",
-			2 => "FLOORS",
-			3 => "SPACE",
-			4 => "BATHROOMS",
-			5 => "GARAGE",
-			6 => "",
+			0 => "HYPERTEXT",
+			1 => "PRICE",
+			2 => "PRIORITY",
+			3 => "FLOORS",
+			4 => "SPACE",
+			5 => "BATHROOMS",
+			6 => "GARAGE",
+			7 => "GALLERY",
+			8 => "ADDITIONAL_FILES",
+			9 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "1",
+		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "bottombreadcrumb",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/lichnyy-kabinet-prodavtsa/moi-obyavleniya/",
