@@ -21,6 +21,9 @@ if($arResult["SHOW_SMS_FIELD"] == true)
 	CJSCore::Init('phone_auth');
 }
 ?>
+
+
+
 <div class="bx-auth col-md-12 col-lg-8 mb-5">
 <?
 ShowMessage($arParams["~AUTH_RESULT"]);

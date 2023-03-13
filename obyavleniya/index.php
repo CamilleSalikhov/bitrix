@@ -101,7 +101,7 @@ $APPLICATION->SetTitle("Объявления");
 	"bitrix:news", 
 	"mynews", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -212,7 +212,7 @@ $APPLICATION->SetTitle("Объявления");
 		)
 	),
 	false
-);?> <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."obyavleniya/index.php"):?>
+);?> <!-- <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."obyavleniya/index.php"):?>
 		<div class="row">
 			<div class="col-md-12 text-center">
 				 <?$APPLICATION->IncludeComponent(
@@ -226,7 +226,7 @@ $APPLICATION->SetTitle("Объявления");
 );?>
 			</div>
 		</div>
-		 <?endif;?><br>
+		 <?endif;?><br> -->
 		 <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."obyavleniya/index.php"):?>
 	</div>
 </div>

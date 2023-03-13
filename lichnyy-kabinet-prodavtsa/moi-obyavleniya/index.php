@@ -11,8 +11,8 @@ $APPLICATION->SetTitle("Мои объявления");
 /* $userID = $USER->GetID(); 
 $arFilter = array("CREATED_BY"=>$userID);
   */
-$GLOBALS["arrFilterNew"]["CREATED_BY"] = $USER->GetID();
-
+/* $GLOBALS["arrFilterNew"]["CREATED_BY"] = $USER->GetID();
+ */
  
 ?>  
  

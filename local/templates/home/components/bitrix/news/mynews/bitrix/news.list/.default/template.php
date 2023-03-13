@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 
 
 
-<!-- <?var_dump($arParams);?> -->
+  <!-- <?var_dump($arResult);?>  --> 
 
 
 <div class="row mb-5">
@@ -94,5 +94,10 @@ $this->setFrameMode(true);
 
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<br /><?=$arResult["NAV_STRING"]?>
+
+  <!-- <?var_dump($arResult )?> -->
+
+
+
 <?endif;?>
 </div>
