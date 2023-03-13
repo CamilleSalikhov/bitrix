@@ -64,7 +64,7 @@ $APPLICATION->SetTitle("Новости");
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "Y",
 		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "bottombreadcrumb",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/o-servise/novosti/",
@@ -96,7 +96,7 @@ $APPLICATION->SetTitle("Новости");
 );?>
  
 <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."o-servise/novosti/index.php"):?>
-	<div class="row">
+	<!-- <div class="row">
           <div class="col-md-12 text-center">
 <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb", 
@@ -109,7 +109,7 @@ $APPLICATION->SetTitle("Новости");
 	),
 	false
 );?></div>
-</div>
+</div> -->
 	<?endif;?>
 
  
