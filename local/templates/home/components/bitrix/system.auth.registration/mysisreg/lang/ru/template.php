@@ -17,4 +17,8 @@ $MESS["AUTH_NONSECURE_NOTE"] = "Пароль будет отправлен в о
 $MESS["main_register_sms_code"] = "Код подтверждения из СМС:";
 $MESS["main_register_sms_send"] = "Отправить";
 $MESS["main_register_phone_number"] = "Номер телефона:";
+$MESS["CHOOSE_GROUP"] = "Группа";
+$MESS["SELLER"] = "Продавец";
+$MESS["BUYER"] = "Покупатель";
+
 ?>
