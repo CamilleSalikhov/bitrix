@@ -48,13 +48,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
-	),
-	Array(
-		"Регистрация", 
-		"/registratsiya/", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>
