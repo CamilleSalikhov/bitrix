@@ -1,0 +1,108 @@
+data 
+Array
+(
+    [LOGIN] => dsadasdas
+    [NAME] => dsadasd
+    [LAST_NAME] => dasdsda
+    [PASSWORD] => $6$b6D4UB2DggS4aBZ9$UNNY6Dx.2b1TjWF3wLyKyUQtn/JD3cHoie1.7pNA9.AYxSQmco/Z.VBDqzOV9ho6XbNR0bWZ3ZnlJJ/y6MdzU.
+    [CHECKWORD] => gkuebrnxbk94crv95v22owoepktjqudm
+    [~CHECKWORD_TIME] => now()
+    [CONFIRM_PASSWORD] => 8yE2dPGhju2yW25
+    [EMAIL] => dasdasd@dsadasda.cdsadasd
+    [PHONE_NUMBER] => 
+    [ACTIVE] => Y
+    [CONFIRM_CODE] => 
+    [SITE_ID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 10.0.5.1
+    [USER_HOST] => 10.0.5.1
+    [LID] => s1
+    [BLOCKED] => N
+    [PASSWORD_EXPIRED] => N
+    [PERSONAL_GENDER] => 
+    [ID] => 29
+    [RESULT] => 29
+)
+
+________________
+data 
+Array
+(
+    [LOGIN] => dfsfsdfsfsdfsd
+    [NAME] => dsfsfdsf
+    [LAST_NAME] => fdsfsfd
+    [PASSWORD] => $6$pV9pJ0K3T2KcmYLx$.912x0y3trUisFflegqbDyWu.v91PzypPBdKtKTLe70uAXRpJ8Rncl1K8AdH5.Icv0DjSAZdX2ZMRBHlDoyS60
+    [CHECKWORD] => wdau5ofr5skqqu5a4495ev67x0t7pmbh
+    [~CHECKWORD_TIME] => now()
+    [CONFIRM_PASSWORD] => 8yE2dPGhju2yW25
+    [EMAIL] => fsdf@fsfdsf.hfghf
+    [PHONE_NUMBER] => 
+    [ACTIVE] => Y
+    [CONFIRM_CODE] => 
+    [SITE_ID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 10.0.5.1
+    [USER_HOST] => 10.0.5.1
+    [LID] => s1
+    [BLOCKED] => N
+    [PASSWORD_EXPIRED] => N
+    [PERSONAL_GENDER] => 
+    [ID] => 30
+    [RESULT] => 30
+)
+
+________________
+data 
+Array
+(
+    [LOGIN] => dsadasdadaaaaaa
+    [NAME] => 
+    [LAST_NAME] => 
+    [PASSWORD] => $6$UO07G6FJVoo8N4cX$pG/dMYsXXBI8s6t5my/HoZLf7YcPFvmy1hemT7maEucFJXXpGAODV4nUxJSo78qgCrpQ4zoNQ3S7TLWa4czvJ/
+    [CHECKWORD] => t9pqal2ndcz5s18oov8f4wqoabem862x
+    [~CHECKWORD_TIME] => now()
+    [CONFIRM_PASSWORD] => 8yE2dPGhju2yW25
+    [EMAIL] => dasd@dsadsad.dsadasd
+    [PHONE_NUMBER] => 
+    [ACTIVE] => Y
+    [CONFIRM_CODE] => 
+    [SITE_ID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 10.0.5.1
+    [USER_HOST] => 10.0.5.1
+    [LID] => s1
+    [BLOCKED] => N
+    [PASSWORD_EXPIRED] => N
+    [PERSONAL_GENDER] => 
+    [ID] => 31
+    [RESULT] => 31
+)
+
+________________
+data 
+Array
+(
+    [LOGIN] => fdsfsdf
+    [NAME] => 
+    [LAST_NAME] => 
+    [PASSWORD] => $6$CXWgUf2XrMD1atiO$vCrGurLRhANQBQHD37CvV6oaDyRx4Lf3d1rp19KIQPzokrOUB386pjgC.7ij3hGux38/nY8PL.VquBx.Oe5WD.
+    [CHECKWORD] => 31foxneigmjrjepj0pgalvqvx7b7yayo
+    [~CHECKWORD_TIME] => now()
+    [CONFIRM_PASSWORD] => 8yE2dPGhju2yW25
+    [EMAIL] => dadsa@fdsfs.fdfdsf
+    [PHONE_NUMBER] => 
+    [ACTIVE] => Y
+    [CONFIRM_CODE] => 
+    [SITE_ID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 10.0.5.1
+    [USER_HOST] => 10.0.5.1
+    [LID] => s1
+    [BLOCKED] => N
+    [PASSWORD_EXPIRED] => N
+    [PERSONAL_GENDER] => 
+    [ID] => 32
+    [RESULT] => 32
+)
+
+________________
