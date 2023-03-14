@@ -5,6 +5,10 @@ CJSCore::Init();
 
 <div class="bx-system-auth-form col-md-12 col-lg-8 mb-5">
 
+
+
+
+
 <?
 if ($arResult['SHOW_ERRORS'] == 'Y' && $arResult['ERROR'])
 	ShowMessage($arResult['ERROR_MESSAGE']);

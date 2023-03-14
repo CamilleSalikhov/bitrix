@@ -2,26 +2,32 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Регистрация");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:main.register",
-	"deletelaterReg",
-	Array(
+	"bitrix:main.register", 
+	"deletelaterReg", 
+	array(
 		"AUTH" => "Y",
 		"COMPONENT_TEMPLATE" => "deletelaterReg",
-		"REQUIRED_FIELDS" => array(0=>"NAME",),
+		"REQUIRED_FIELDS" => array(
+			0 => "NAME",
+		),
 		"SET_TITLE" => "Y",
-		"SHOW_FIELDS" => array(),
+		"SHOW_FIELDS" => array(
+		),
 		"SUCCESS_PAGE" => "",
-		"USER_PROPERTY" => array(0=>"UF_CHOSEN_GROUP",),
+		"USER_PROPERTY" => array(
+			0 => "UF_CHOSEN_GROUP",
+		),
 		"USER_PROPERTY_NAME" => "UF_CHOSEN_GROUP",
 		"USE_BACKURL" => "Y"
-	)
+	),
+	false
 );?><br>
  <br>
  <br>
  <br>
  <br>
  <br>
- <?$APPLICATION->IncludeComponent(
+ <!-- <?$APPLICATION->IncludeComponent(
 	"bitrix:system.auth.registration",
 	"mysisreg",
 	Array(
@@ -35,7 +41,7 @@ $APPLICATION->SetTitle("Регистрация");
 		"USER_PROPERTY_NAME" => "UF_CHOSEN_GROUP",
 		"USE_BACKURL" => "Y"
 	)
-);?><br>
+);?><br> -->
  <br>
  <br>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

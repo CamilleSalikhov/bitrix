@@ -14,7 +14,7 @@
  * @param array $arResult
  * @param CBitrixComponentTemplate $this
  */
-
+ 
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 	die();
 
@@ -24,7 +24,7 @@ if($arResult["SHOW_SMS_FIELD"] == true)
 }
 ?>
 
-<?var_dump($arResult) ;?>
+<!-- <?var_dump($arResult["USER_PROPERTIES"]["DATA"]) ;?> -->
 
 <div class="bx-auth-reg">
 
@@ -103,6 +103,10 @@ new BX.PhoneAuth({
 
 <?else:?>
 
+	<div class="site-section">
+      <div class="container">
+        <div class="row">
+		<div class="col-md-12 col-lg-8 mb-5">
 <form method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform" enctype="multipart/form-data">
 <?
 if($arResult["BACKURL"] <> ''):
@@ -261,6 +265,8 @@ if ($arResult["USE_CAPTCHA"] == "Y")
 	</tfoot>
 </table>
 </form>
+
+</div></div></div></div>
 
 <p><?echo $arResult["GROUP_POLICY"]["PASSWORD_REQUIREMENTS"];?></p>
 
