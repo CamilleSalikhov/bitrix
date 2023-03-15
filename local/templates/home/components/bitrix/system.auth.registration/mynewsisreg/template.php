@@ -5,7 +5,7 @@
  * @subpackage main
  * @copyright 2001-2014 Bitrix
  */
-
+ 
 /**
  * Bitrix vars
  * @global CMain $APPLICATION
@@ -14,6 +14,13 @@
  * @var CBitrixComponentTemplate $this
  */
 
+
+  var_dump($arResult); 
+
+
+
+
+
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 if($arResult["SHOW_SMS_FIELD"] == true)
@@ -21,10 +28,7 @@ if($arResult["SHOW_SMS_FIELD"] == true)
 	CJSCore::Init('phone_auth');
 }
 ?>
-
-<?print_r("hewow");?>
-
-<div class="bx-auth col-md-12 col-lg-8 mb-5">
+<div class="bx-auth">
 <?
 ShowMessage($arParams["~AUTH_RESULT"]);
 ?>
@@ -91,40 +95,29 @@ new BX.PhoneAuth({
 	<input type="hidden" name="AUTH_FORM" value="Y" />
 	<input type="hidden" name="TYPE" value="REGISTRATION" />
 
- 
-	 
-		 
-			<p colspan="2"><b><?=GetMessage("AUTH_REGISTER")?></b></p>
-		 
-	 
-	 
-			<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			 <label class="font-weight-bold" for="username"><?=GetMessage("AUTH_NAME")?></label>
-			 <input class="bx-auth-input form-control" id="username" type="text" name="USER_NAME" maxlength="50" value="<?=$arResult["USER_NAME"]?>" class="bx-auth-input" /> 
-</div>
-</div>
-
-<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			 <label class="font-weight-bold" for="USER_LAST_NAME"><?=GetMessage("AUTH_LAST_NAME")?></label>
-			 <input class="bx-auth-input form-control" id ="USER_LAST_NAME" type="text" name="USER_LAST_NAME" maxlength="50" value="<?=$arResult["USER_LAST_NAME"]?>" class="bx-auth-input" /> 
-			</div>
-</div>
-
-
-<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			  <label class="font-weight-bold" for="USER_LOGIN"><span class="starrequired">*</span><?=GetMessage("AUTH_LOGIN_MIN")?></label> 
-			 <input id="USER_LOGIN" class="bx-auth-input form-control" type="text" name="USER_LOGIN" maxlength="50" value="<?=$arResult["USER_LOGIN"]?>" class="bx-auth-input" /> 
-			</div>
-</div>
-
-
-<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			   <label class="font-weight-bold" for="USER_PASSWORD"><span class="starrequired">*</span><?=GetMessage("AUTH_PASSWORD_REQ")?></label>
-			 <input id ="USER_PASSWORD" class="bx-auth-input form-control" type="password" name="USER_PASSWORD" maxlength="255" value="<?=$arResult["USER_PASSWORD"]?>" class="bx-auth-input" autocomplete="off" />
+<table class="data-table bx-registration-table">
+	<thead>
+		<tr>
+			<td colspan="2"><b><?=GetMessage("AUTH_REGISTER")?></b></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr> 
+			<td><?=GetMessage("AUTH_NAME")?></td>
+			<td><input type="text" name="USER_NAME" maxlength="50" value="<?=$arResult["USER_NAME"]?>" class="bx-auth-input" /></td>
+		
+		</tr>
+		<tr>
+			<td><?=GetMessage("AUTH_LAST_NAME")?></td>
+			<td><input type="text" name="USER_LAST_NAME" maxlength="50" value="<?=$arResult["USER_LAST_NAME"]?>" class="bx-auth-input" /></td>
+		</tr>
+		<tr>
+			<td><span class="starrequired">*</span><?=GetMessage("AUTH_LOGIN_MIN")?></td>
+			<td><input type="text" name="USER_LOGIN" maxlength="50" value="<?=$arResult["USER_LOGIN"]?>" class="bx-auth-input" /></td>
+		</tr>
+		<tr>
+			<td><span class="starrequired">*</span><?=GetMessage("AUTH_PASSWORD_REQ")?></td>
+			<td><input type="password" name="USER_PASSWORD" maxlength="255" value="<?=$arResult["USER_PASSWORD"]?>" class="bx-auth-input" autocomplete="off" />
 <?if($arResult["SECURE_AUTH"]):?>
 				<span class="bx-auth-secure" id="bx_auth_secure" title="<?echo GetMessage("AUTH_SECURE_NOTE")?>" style="display:none">
 					<div class="bx-auth-secure-icon"></div>
@@ -138,28 +131,18 @@ new BX.PhoneAuth({
 document.getElementById('bx_auth_secure').style.display = 'inline-block';
 </script>
 <?endif?>
-			 
-			</div>
-</div>
-
-
-
-<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			   <label class="font-weight-bold" for="USER_CONFIRM_PASSWORD"><span class="starrequired">*</span><?=GetMessage("AUTH_CONFIRM")?></label>
-			 <input id="USER_CONFIRM_PASSWORD" class="bx-auth-input form-control" type="password" name="USER_CONFIRM_PASSWORD" maxlength="255" value="<?=$arResult["USER_CONFIRM_PASSWORD"]?>" class="bx-auth-input" autocomplete="off" /> 
-			</div>
-</div>
-
-
+			</td>
+		</tr>
+		<tr>
+			<td><span class="starrequired">*</span><?=GetMessage("AUTH_CONFIRM")?></td>
+			<td><input type="password" name="USER_CONFIRM_PASSWORD" maxlength="255" value="<?=$arResult["USER_CONFIRM_PASSWORD"]?>" class="bx-auth-input" autocomplete="off" /></td>
+		</tr>
 
 <?if($arResult["EMAIL_REGISTRATION"]):?>
-	<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			   <label class="font-weight-bold" for="USER_EMAIL"><?if($arResult["EMAIL_REQUIRED"]):?><span class="starrequired">*</span><?endif?><?=GetMessage("AUTH_EMAIL")?></label>
-			<td><input id="USER_EMAIL" class="bx-auth-input form-control" type="text" name="USER_EMAIL" maxlength="255" value="<?=$arResult["USER_EMAIL"]?>" class="bx-auth-input" /></td>
-			</div>
-</div>
+		<tr>
+			<td><?if($arResult["EMAIL_REQUIRED"]):?><span class="starrequired">*</span><?endif?><?=GetMessage("AUTH_EMAIL")?></td>
+			<td><input type="text" name="USER_EMAIL" maxlength="255" value="<?=$arResult["USER_EMAIL"]?>" class="bx-auth-input" /></td>
+		</tr>
 <?endif?>
 
 <?if($arResult["PHONE_REGISTRATION"]):?>
@@ -187,24 +170,20 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 	if ($arResult["USE_CAPTCHA"] == "Y")
 	{
 		?>
-		 
-			 <b><?=GetMessage("CAPTCHA_REGF_TITLE")?></b> 
-		 
-		<div>
-			 
-			 
+		<tr>
+			<td colspan="2"><b><?=GetMessage("CAPTCHA_REGF_TITLE")?></b></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
 				<input type="hidden" name="captcha_sid" value="<?=$arResult["CAPTCHA_CODE"]?>" />
 				<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["CAPTCHA_CODE"]?>" width="180" height="40" alt="CAPTCHA" />
-			 
-	</div>
-
-
-		<div class="row form-group">
-			<div class="col-md-12 mb-3 mb-md-0">
-			   <label class="font-weight-bold" for="captcha_word"><span class="starrequired">*</span><?=GetMessage("CAPTCHA_REGF_PROMT")?></label>
-			 <input id="captcha_word" class="bx-auth-input form-control" type="text" name="captcha_word" maxlength="50" value="" autocomplete="off" /> 
-			</div>
-</div>
+			</td>
+		</tr>
+		<tr>
+			<td><span class="starrequired">*</span><?=GetMessage("CAPTCHA_REGF_PROMT")?>:</td>
+			<td><input type="text" name="captcha_word" maxlength="50" value="" autocomplete="off" /></td>
+		</tr>
 		<?
 	}
 	/* CAPTCHA */
@@ -235,8 +214,16 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 				);?>
 			</td>
 		</tr>
-	 
-	 
+	</tbody>
+	<tfoot>
+		<tr> 
+			<td></td>
+			<td><input type="submit" name="Register" value="<?=GetMessage("AUTH_REGISTER")?>" /></td>
+		</tr>
+	</tfoot>
+</table>
+
+
 <div class="row form-group">
                 <div class="col-md-12">
 				<fieldset>
@@ -262,21 +249,20 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 		</div>
               </div>
 
-
-	<div class="row form-group">
-                <div class="col-md-12">
-			 <input type="submit" class="btn btn-primary  py-2 px-4 rounded-0"  name="Register" value="<?=GetMessage("AUTH_REGISTER")?>" /> 
-			</div>
-              </div>
-	 
- 
-
 </form>
 
 <p><?echo $arResult["GROUP_POLICY"]["PASSWORD_REQUIREMENTS"];?></p>
 <p><span class="starrequired">*</span><?=GetMessage("AUTH_REQ")?></p>
 
-<p><a href="https://hv01-salihov.study.mcart.ru/avtorizatsiya/" rel="nofollow"><b><?=GetMessage("AUTH_AUTH")?></b></a></p>
+<p><a href="<?=$arResult["AUTH_AUTH_URL"]?>" rel="nofollow"><b><?=GetMessage("AUTH_AUTH")?></b></a></p>
+
+ 
+
+
+
+
+
+
 
 <script type="text/javascript">
 document.bform.USER_NAME.focus();

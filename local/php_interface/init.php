@@ -9,7 +9,7 @@
     public static  function OnAfterUserAddHandler(&$arFields) 
     { 
  
- 
+      file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/test.txt", 'data '. "\n" . print_r($arFields, 1) . "\n________________\n", FILE_APPEND);
  
  
         

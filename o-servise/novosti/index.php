@@ -20,7 +20,6 @@ $APPLICATION->SetTitle("Новости");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "servicenews",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
@@ -58,7 +57,7 @@ $APPLICATION->SetTitle("Новости");
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "2",
+		"NEWS_COUNT" => "1",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -86,6 +85,7 @@ $APPLICATION->SetTitle("Новости");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => "servicenews",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -93,10 +93,7 @@ $APPLICATION->SetTitle("Новости");
 		)
 	),
 	false
-);?>
- 
-<?if($APPLICATION -> GetCurPage(true) == SITE_DIR."o-servise/novosti/index.php"):?>
-	<!-- <div class="row">
+);?> <?if($APPLICATION -> GetCurPage(true) == SITE_DIR."o-servise/novosti/index.php"):?> <!-- <div class="row">
           <div class="col-md-12 text-center">
 <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb", 
@@ -109,14 +106,7 @@ $APPLICATION->SetTitle("Новости");
 	),
 	false
 );?></div>
-</div> -->
-	<?endif;?>
-
- 
-
-
-
-
+</div> --> <?endif;?>
 	</div>
 </div>
- <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

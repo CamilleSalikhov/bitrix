@@ -42,6 +42,27 @@ $APPLICATION->SetTitle("Регистрация");
 		"USE_BACKURL" => "Y"
 	)
 );?><br> -->
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:system.auth.registration",
+	"mynewsisreg",
+	Array(
+		"AUTH" => "Y",
+		"REQUIRED_FIELDS" => array(),
+		"SET_TITLE" => "Y",
+		"SHOW_FIELDS" => array(),
+		"SUCCESS_PAGE" => "",
+		"USER_PROPERTY" => array(),
+		"USER_PROPERTY_NAME" => "",
+		"USE_BACKURL" => "Y"
+	)
+);?>
+
+
+
+
+
+
  <br>
  <br>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
